@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/style/add.css">
+
+<div class="container">
+    <div class="name">
+        <h2>{{people.name}} {{people.surname}}</h2>
+    </div>
+    <form action="/people/score/{{people.id}}" method="post">
+        <input type="text" name="name" value="{{people.name}}">
+        <input type="text" name="surname" value="{{people.surname}}">
+        <input type="number" value="{{people.month}}" name="month">
+        <input type="number" value="{{people.number}}" name="number">
+        <input type="number" value="{{people.group}}" name="group">
+        <input type="number" value="{{people.score}}" name="oldScore">  
+        <input type="number" placeholder="Write a score you want add..." name="score">
+        <button type="submit">Submit</button>
+    </form>
+</div>

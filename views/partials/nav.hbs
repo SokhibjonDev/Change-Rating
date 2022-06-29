@@ -1,0 +1,75 @@
+<nav>
+  <div class="container">
+    <div class="row">
+      <div class="logo">
+        <a href="/">Change  It <img src="/img/diagram.png" alt=""></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li class="menu_item"><a class="a" href="/">Barcha o'quvchilar</a></li>
+          {{! <li class="menu_item"><a href="/people/peoples/1">1-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/2">2-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/3">3-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/4">4-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/5">5-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/6">6-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/7">7-month</a></li>
+                    <li class="menu_item"><a href="/people/peoples/8">8-month</a></li> }}
+          <li class="menu_item click_btn"><p class="a">Oy bo'yicha o'quvchilar ro'yxati 
+              <svg class="select"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+            </p>
+            <div class="click_nav">
+            <ul style="display: none;">
+              <li class="click_item"><a href="/people/peoples/1">1-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/2">2-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/3">3-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/4">4-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/5">5-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/6">6-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/7">7-oy</a></li>
+              <li class="click_item"><a href="/people/peoples/8">8-oy</a></li>
+            </ul>
+          </div></li>
+          <li class="menu_item click_btn2"><p class="a">Guruh bo'yicha o'quvchilar ro'yxati 
+              <svg class="select"
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.646447 0.646447C0.841709 0.451184 1.15829 0.451184 1.35355 0.646447L7 6.29289L12.6464 0.646447C12.8417 0.451184 13.1583 0.451184 13.3536 0.646447C13.5488 0.841709 13.5488 1.15829 13.3536 1.35355L7.35355 7.35355C7.15829 7.54882 6.84171 7.54882 6.64645 7.35355L0.646447 1.35355C0.451184 1.15829 0.451184 0.841709 0.646447 0.646447Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+            </p>
+            <div class="click_nav2">
+            <ul style="display: none;">
+              {{#each result}}
+              <li class="click_item"><a href="/people/peoples/{{@key}}">{{@key}}-guruh</a></li>
+              {{/each}}
+            </ul>
+          </div></li>
+          <li class="menu_item"><a class="last_menu_link" href="/people/add">O'quvchi qo'shish</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
