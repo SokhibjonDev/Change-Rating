@@ -9,6 +9,7 @@ inp.addEventListener("input", (e) => {
       const html = item
         .map((people) => {
           return `
+          <table style="width: 1157px;">
             <tr>
                 <td class="top">${num++}</td>
                 <td>${people.name} ${people.surname}</td>
@@ -22,6 +23,7 @@ inp.addEventListener("input", (e) => {
                     <a href="#" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
                 </td>
             </tr>
+            </table>
             `;
         })
         .join("");

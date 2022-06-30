@@ -44,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -53,7 +53,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: rgb(10, 10, 32);
-  border-radius: 50px;
 }
 
 nav {
@@ -100,7 +99,7 @@ h2 {
   position: absolute;
   transform: translateX(-300px);
 }
-.click_item{
+.click_item {
   background: none;
 }
 .click_nav2 ul {
@@ -108,7 +107,7 @@ h2 {
   transform: translateX(-1170px);
 }
 .click_nav2 ul li {
-  color: #fff;
+  color: #fff !important;
 }
 
 .menu_item {
@@ -261,9 +260,9 @@ table {
   margin-right: 70px;
 }
 .click_nav ul {
-  padding: 15px;
+  padding: 5px;
   width: 1930px;
-  transform: translateX(-900px);
+  transform: translateX(-910px);
 }
 
 .catalog .click_item {
