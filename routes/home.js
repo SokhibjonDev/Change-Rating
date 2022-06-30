@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.get('/all/:search', async (req, res) => {
-    const people = await Mongo.find()
+    const people = await Mongo.find().limit(10)
     .sort({score: -1})
 
     const peop = people.filter(item => item.name.toLowerCase().includes(req.params.search) || item.surname.toLowerCase().includes(req.params.search))

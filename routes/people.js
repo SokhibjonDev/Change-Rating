@@ -50,9 +50,15 @@ router.post('/score/:id', async (req, res ) => {
 })
 
 router.get('/peoples/:month', async (req, res) => {
+    const people = await Mongo.find()
     const findPeople = await Mongo.find({month: {$eq: req.params.month}}).sort({score: -1})
+    const result = people.reduce((total, value) => {
+        total[value.group] = (total[value.group] || 0) + 1;
+        return total;
+   }, {});
     res.render('month', {
-        findPeople
+        findPeople,
+        result
     })
 })
 

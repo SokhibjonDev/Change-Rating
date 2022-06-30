@@ -5,10 +5,9 @@ inp.addEventListener("input", (e) => {
   fetch(`/all/${inp.value.toLowerCase()}`)
     .then((item) => item.json())
     .then((item) => {
-          let num = 1;
+      let num = 1;
       const html = item
         .map((people) => {
-
           return `
             <tr>
                 <td class="top">${num++}</td>
@@ -17,9 +16,11 @@ inp.addEventListener("input", (e) => {
                 <td>${people.number}</td>
                 <td>${people.group}</td>
                 <td>${people.month}</td>
-                <td class="btn"><a href="/people/${
-                  people._id
-                }" class="edit">O'zgartirish</a></td>
+                <td class="btn" style="display: flex; margin-right: -200px;">
+                    <a href="/people/${people.id}" class="edit" ><img width="14px" src="/img/pencil.png" alt=""></a>
+                    <div class="line"></div>
+                    <a href="#" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
+                </td>
             </tr>
             `;
         })
