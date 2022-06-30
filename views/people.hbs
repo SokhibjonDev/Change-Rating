@@ -1,17 +1,19 @@
 <link rel="stylesheet" href="/style/add.css">
 
 <div class="container">
-    <div class="name">
-        <h2>{{people.name}} {{people.surname}}</h2>
-    </div>
-    <form action="/people/score/{{people.id}}" method="post">
+    <form class="addStudent" style="background: #fff; box-shadow: 0 0 15px 5px #ccc;"
+        action="/people/score/{{people.id}}" method="post">
+        <div class="name">
+            <h2 class="after" style="font-size: 28px;">{{people.name}} {{people.surname}}</h2>
+        </div>
         <input type="text" name="name" value="{{people.name}}">
         <input type="text" name="surname" value="{{people.surname}}">
         <input type="number" value="{{people.month}}" name="month">
         <input type="number" value="{{people.number}}" name="number">
         <input type="number" value="{{people.group}}" name="group">
-        <input type="number" value="{{people.score}}" name="oldScore">  
-        <input type="number" placeholder="Write a score you want add..." name="score">
-        <button type="submit">Submit</button>
+        <input type="number" value="{{people.score}}" name="oldScore">
+        <button
+            style="background: #161623; border-radius: 25px; color: #fff; text-transform: uppercase; padding: 15px 45px; letter-spacing: 2px;"
+            type="submit">Submit</button>
     </form>
 </div>

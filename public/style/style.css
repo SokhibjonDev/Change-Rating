@@ -9,14 +9,14 @@
 }
 
 body {
-    background: #252839;
-    color: #ccc;
+    background: #fff;
+    color: #000 !important;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .empty {
@@ -26,10 +26,6 @@ body {
 .container {
     width: 1200px;
     margin: auto;
-}
-
-tbody a {
-    color: #fff;
 }
 
 .row {
@@ -45,33 +41,6 @@ tbody a {
 
 .body {
     margin-top: 120px;
-}
-
-.body::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 140px;
-    left: 70px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #00a2ff;
-    box-shadow: 0 0 20px #00a2ff;
-}
-
-.body::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 180px;
-    right: 90px;
-    width: 200px;
-    z-index: -1;
-    height: 200px;
-    border-radius: 50%;
-    background: #00a2ff;
-    box-shadow: 0 0 20px #00a2ff;
 }
 
 ::-webkit-scrollbar {
@@ -90,31 +59,26 @@ tbody a {
 nav {
     z-index: 999;
     width: 100%;
-    background: #161623;
-    padding: 20px;
+    background: #fff;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
 }
 
+footer {
+    box-shadow: 0px -7px 4px rgba(0, 0, 0, 0.1);
+}
+
 a,
 p,
 h2 {
-    color: #000;
-}
-
-.logo img {
-    position: absolute;
-    width: 18px;
-    margin-left: 10px;
+    color: #000 !important;
 }
 
 .logo a {
     text-transform: uppercase;
     font-weight: 700;
-    color: #fff;
-    cursor: pointer;
     font-size: 18px;
 }
 
@@ -132,7 +96,7 @@ h2 {
 }
 
 .menu_item:hover .a svg path {
-    fill: #fff;
+    fill: #000;
 }
 
 .menu_item a {
@@ -145,10 +109,8 @@ p {
 }
 
 .last_menu_link {
-    font-weight: 700;
-    color: #ccc;
-    background-color: #00a2ff !important;
-    padding: 15px 0;
+    font-weight: 500;
+    color: #000;
 }
 
 h2 {
@@ -156,17 +118,8 @@ h2 {
 }
 
 table {
+    /* width: 1100px; */
     width: 100%;
-    /* width: 150.3%;
-    transform: translateX(-633px); */
-}
-
-form {
-    width: 800px;
-    background: #2f2d2e;
-    margin: auto;
-    padding: 30px;
-    margin-bottom: 40px;
 }
 
 form h2 {
@@ -179,14 +132,6 @@ form button {
     padding: 10px 20px;
 }
 
-/* input{
-    display: block;
-    width: 400px;
-    margin: auto;
-    padding: 10px;
-    margin-bottom: 10px;
-} */
-
 .list_pupil {
     margin-bottom: 100px;
 }
@@ -197,6 +142,17 @@ form button {
     text-transform: uppercase;
 }
 
+.edit {
+    color: #000 !important;
+    font-weight: 600;
+}
+.line{
+    height: 36px;
+    width: 1px;
+    background: #000;
+    position: absolute;
+    transform: translateX(95px) translateY(-6px);
+}
 .inp_search {
     justify-content: center !important;
     align-items: center;
@@ -212,13 +168,13 @@ form button {
     display: block;
     width: 400px;
     padding: 10px;
-    color: #ccc;
+    color: #000;
     border: none;
     background: transparent;
 }
 
 .inp::placeholder {
-    color: #ccc;
+    color: #000;
 }
 
 .inp:focus {
@@ -238,20 +194,6 @@ form button {
     margin: 0 10px;
 }
 
-/* .edit{
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: gold;
-    color: #000;
-} */
-
-/* .form{
-    width: 500px;
-    margin: auto;
-    text-align: center;
-} */
-
 .form button {
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -265,8 +207,7 @@ table {
 .btn a {
     display: block;
     width: 100%;
-    height: 100%;
-    color: #fff;
+    color: #000;
 }
 
 .click_btn2,
@@ -280,7 +221,7 @@ table {
     top: 100%;
     right: 0;
     width: 50%;
-    background: rgb(252, 251, 251);
+    background: black000;
 }
 
 .click_btn2:hover .click_nav2 ul,
@@ -296,11 +237,11 @@ table {
 .click_item {
     margin-bottom: 10px;
     text-align: center;
-    background: #00a2ff;
+    background: #fff;
 }
 
 .click_item:hover a {
-    color: #00a2ff;
+    color: #fff;
 }
 
 tr,
@@ -309,21 +250,19 @@ td {
     border: 1px solid #06041e6b;
     text-align: center;
     padding: 8px;
-    color: #ccc;
+    color: #000;
 }
-
-tr {}
 
 thead {
     background: #e9e9e9;
 }
 
-footer {
+footer,
+p {
     width: 100%;
     padding: 20px 0;
-    background: #161623;
-    color: #ccc;
-
+    background: #fff;
+    color: #000;
 }
 
 .icons {
@@ -358,13 +297,13 @@ footer {
     border-radius: 25px;
     padding: 15px;
     padding-left: 20px;
-    border: 1px solid #ccc;
-    color: #ccc;
+    border: 1.5px solid #161623;
+    color: #161623;
 }
 
 
-.addStudent input::placeholder{
-    color: #ccc;
+.addStudent input::placeholder {
+    color: #161623;
 }
 
 .after::after {
@@ -376,7 +315,8 @@ footer {
     margin: auto;
     margin-top: 10px;
 }
-.after::before{
+
+.after::before {
     content: '';
     display: block;
     width: 200px;
@@ -386,11 +326,17 @@ footer {
     margin-bottom: 10px;
 }
 
-:focus{
+:focus {
     outline: none;
 }
-
-.addStudent .btn{
+form {
+    width: 800px;
+    background: #2f2d2e;
+    margin: auto;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+.addStudent .btn {
     background: #252839;
     border: 1px solid #161623;
     padding: 13px 15px;
@@ -399,12 +345,21 @@ footer {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-table .btn{
-    
-    width: 200px;
-    font-size: 14px;
-    /* text-transform: uppercase; */
+
+table .btn {
+    width: 205px;
+    font-size: 19px;
     letter-spacing: 2px;
-    border: 3px solid #161623;
-    background: #171924;
+    background: #fff;
+    color: #000 !important;
+    padding: 6.3px;
+    position: absolute;
+    transform: translateY(-1px);
+}
+
+.img {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    margin-top: -20px;
 }

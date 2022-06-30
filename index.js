@@ -27,9 +27,9 @@ app.use('/', homeRouter)
 app.use('/people', peopleRouter)
 
 try {
-    const port = 3000
+    const port = 5000
     app.listen(port, () => {
-        console.log('Server working on', port);
+        console.log('Start with', port , 'port');
     })
 } catch (error) {
     console.log(error);
