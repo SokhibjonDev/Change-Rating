@@ -3,7 +3,14 @@ const router = express.Router()
 const Mongo = require('../model/Mongo')
 
 router.get('/add', async (req, res) => {
-    res.render('addPeople')
+    const people = await Mongo.find()
+    const result = people.reduce((total, value) => {
+        total[value.group] = (total[value.group] || 0) + 1;
+        return total;
+   }, {});
+    res.render('addPeople',{
+        result
+    })
 })
 
 router.post('/add', async (req, res) => {
@@ -30,9 +37,15 @@ router.post('/add', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
+    const people = await Mongo.find()
+    const result = people.reduce((total, value) => {
+        total[value.group] = (total[value.group] || 0) + 1;
+        return total;
+   }, {});
     const peopleFind = await Mongo.findById(req.params.id)
     res.render('people', {
-        people: peopleFind
+        people: peopleFind,
+        result
     })
 })
 
