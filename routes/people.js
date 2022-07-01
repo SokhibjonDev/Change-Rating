@@ -56,10 +56,22 @@ router.get('/peoples/:month', async (req, res) => {
         total[value.group] = (total[value.group] || 0) + 1;
         return total;
    }, {});
+   const peoples = await Mongo.find()
+    const sum = []
+    let num = peoples.length / 10
+    for (let i = 0; i < num; i++) {
+        sum.push(i + 1)
+    }
     res.render('month', {
         findPeople,
-        result
+        result,
+        sum
     })
+})
+
+router.get('/del/:id', async (req, res) => {
+    await Mongo.findByIdAndDelete(req.params.id)
+    res.redirect('/')
 })
 
 

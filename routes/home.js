@@ -5,8 +5,9 @@ const Mongo = require('../model/Mongo')
 
 router.get('/', async (req, res) => {    
     const people = await Mongo.find().sort({ score: -1 }).limit(10)
+    const peoples = await Mongo.find()
     const sum = []
-    let num = people.length / 10
+    let num = peoples.length / 10
     for (let i = 0; i < num; i++) {
         sum.push(i + 1)
     }
@@ -25,8 +26,9 @@ router.get('/:id', async (req, res) => {
     let page = +req.params.id
     let skip = (page - 1) * 10
     const people = await Mongo.find().sort({ score: -1, _id: 1 }).limit(10).skip(skip)
+    const peoples = await Mongo.find()
     const sum = []
-    let num = people.length / 10
+    let num = peoples.length / 10
     for (let i = 0; i < num; i++) {
         sum.push(i + 1)
     }
@@ -37,8 +39,7 @@ router.get('/:id', async (req, res) => {
 })
 
 router.get('/all/:search', async (req, res) => {
-    const people = await Mongo.find().limit(10)
-    .sort({score: -1})
+    const people = await Mongo.find().sort({score: -1})
 
     const peop = people.filter(item => item.name.toLowerCase().includes(req.params.search) || item.surname.toLowerCase().includes(req.params.search))
     res.send(peop)
