@@ -32,9 +32,14 @@ router.get('/:id', async (req, res) => {
     for (let i = 0; i < num; i++) {
         sum.push(i + 1)
     }
+    const result = peoples.reduce((total, value) => {
+        total[value.group] = (total[value.group] || 0) + 1;
+        return total;
+   }, {});
     res.render('index', {
         people,
-        sum
+        sum,
+        result
     })
 })
 
