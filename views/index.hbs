@@ -33,7 +33,7 @@
                     <th style="color: #fff;">Raqami</th>
                     <th style="color: #fff;">Guruhi</th>
                     <th style="color: #fff;">O'qiyotgan oyi</th>
-                    <th style="color: #fff;">O'zgartirish</th>
+                    <th style="color: #fff;" colspan="2">O'zgartirish</th>
                 </tr>
             </thead>
 
@@ -47,9 +47,10 @@
                 <td {{!-- style="text-align: start;" --}}><a href="tel:{{number}}">{{number}}</a></td>
                 <td>{{group}}</td>
                 <td>{{month}}</td>
-                <td class="btn" style="display: flex; margin-right: -200px;">
+                <td class="btn">
                     <a href="/people/{{id}}" class="edit" ><img width="14px" src="/img/pencil.png" alt=""></a>
-                    <div class="line"></div>
+                </td>
+                <td>
                     <a href="/people/del/{{id}}" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
                 </td>
                     {{!-- <a href="/people/{{id}}" class="delete" ><img width="14px" src="/img/trash.png" alt=""></a> --}}

@@ -97,15 +97,11 @@ h2 {
   background: #161623;
   width: 100%;
   position: absolute;
-  transform: translateX(-300px);
 }
 .click_item {
   background: none;
 }
-.click_nav2 ul {
-  width: 1930px;
-  transform: translateX(-1170px);
-}
+
 .click_nav2 ul li {
   color: #fff !important;
 }
@@ -113,6 +109,9 @@ h2 {
 .menu_item {
   cursor: pointer;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu_item:hover .a svg path {
@@ -165,13 +164,7 @@ form button {
   color: #000 !important;
   font-weight: 600;
 }
-.line {
-  height: 36px;
-  width: 1px;
-  background: #000;
-  position: absolute;
-  transform: translateX(92px) translateY(-6px);
-}
+
 .inp_search {
   justify-content: center !important;
   align-items: center;
@@ -234,35 +227,44 @@ table {
 }
 .click_nav ul {
   display: flex;
-  width: 1000px;
+  width: 100vw;
 }
-.click_nav2,
+/* .click_nav2,
 .click_nav {
   position: absolute;
   display: block;
   width: 1440px;
   top: 100%;
-}
+} */
 
-.click_btn2:hover .click_nav2 ul,
+
 .click_btn:hover .click_nav ul {
   display: flex !important;
   position: absolute;
+  top: 100%;
+  left: -362%;
 }
+
+.click_btn2:hover .click_nav2 ul{
+  display: flex !important;
+  position: absolute;
+  top: 100%;
+  left: -430.5%;
+  padding: 15px;
+}
+
 .catalog,
 .catalog1 {
-  width: 1000px;
+  width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-left: 30px;
 }
 .click_item {
   margin-right: 70px;
 }
 .click_nav ul {
   padding: 5px;
-  width: 1930px;
-  transform: translateX(-910px);
 }
 
 .catalog .click_item {
@@ -373,17 +375,6 @@ form {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-}
-
-table .btn {
-  width: 197.5px;
-  font-size: 19px;
-  letter-spacing: 2px;
-  background: #fff;
-  color: #000 !important;
-  padding: 6.3px;
-  position: absolute;
-  transform: translateY(-1px);
 }
 
 .img {

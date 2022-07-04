@@ -22,7 +22,7 @@
             <th>Raqami</th>
             <th>Guruhi</th>
             <th>O'qiyotgan oyi</th>
-            <th>O'zgartirish</th>
+            <th colspan="2">O'zgartirish</th>
         </tr>
         {{#if findPeople.length}}
         {{#each findPeople}}
@@ -33,12 +33,12 @@
             <td width="200px">{{number}}</td>
             <td>{{group}}</td>
             <td>{{month}}</td>
-            <td class="btn"
-                style="position: relative; display: flex; width: 101%; transform: translateX(-1px) translateY(-1px);">
-                <a href="/people/{{id}}" class="edit"><img width="14px" src="/img/pencil.png" alt=""></a>
-                <div class="line" style="transform: translateX(100px) translateY(-6px);"></div>
-                <a href="#" class="edit"><img width="14px" src="/img/trash.png" alt=""></a>
-            </td>
+            <td class="btn">
+                    <a href="/people/{{id}}" class="edit" ><img width="14px" src="/img/pencil.png" alt=""></a>
+                </td>
+                <td>
+                    <a href="/people/del/{{id}}" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
+                </td>
         </tr>
         {{/each}}
         {{else}}
