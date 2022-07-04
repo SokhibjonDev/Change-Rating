@@ -170,7 +170,7 @@ form button {
   width: 1px;
   background: #000;
   position: absolute;
-  transform: translateX(95px) translateY(-6px);
+  transform: translateX(92px) translateY(-6px);
 }
 .inp_search {
   justify-content: center !important;
@@ -376,7 +376,7 @@ form {
 }
 
 table .btn {
-  width: 205px;
+  width: 197.5px;
   font-size: 19px;
   letter-spacing: 2px;
   background: #fff;
