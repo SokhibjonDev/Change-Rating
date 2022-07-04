@@ -17,10 +17,11 @@ inp.addEventListener("input", (e) => {
                 <td>${people.number}</td>
                 <td>${people.group}</td>
                 <td>${people.month}</td>
-                <td class="btn" style="display: flex; margin-right: -200px;">
+                <td class="btn">
                     <a href="/people/${people.id}" class="edit" ><img width="14px" src="/img/pencil.png" alt=""></a>
-                    <div class="line"></div>
-                    <a href="#" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
+                </td>
+                <td>
+                    <a href="/people/del/${people.id}" class="edit" ><img width="14px" src="/img/trash.png" alt=""></a>
                 </td>
             </tr>
             </table>
